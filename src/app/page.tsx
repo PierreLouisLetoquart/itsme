@@ -1,36 +1,20 @@
 import Link from "next/link";
-
-import { projects } from "@/utils/projects";
-import { ProjectCard } from "@/components/project-card";
 import { Paragraph } from "@/components/paragraph";
-import { Heading2 } from "@/components/heading";
 
 export default function Home() {
   return (
-    <main className="mx-auto w-full max-w-4xl py-12 md:py-20">
-      <h1 className="mb-6 text-3xl font-bold tracking-tighter md:mb-10 md:text-5xl">
-        PLL.
-      </h1>
-      <Paragraph className="mb-4 md:mb-6">
+    <>
+      <Paragraph className="mb-6 md:mb-8">
         👋 Hi there! I&apos;m Pierre-Louis, a student in computer science
         actually in Montreal, Canada. When I&apos;m not programming, I like to
         play basketball or climbing montains with my friends.
       </Paragraph>
-      <Paragraph className="mb-8 md:mb-12">
+
+      <Paragraph className="mb-8 md:mb-10">
         I created this portfolio to share my projects and my thoughts about the
         tech world. I hope you will find something interesting here! 🚀
       </Paragraph>
-      <Heading2>My Projects</Heading2>
-      <Paragraph className="mb-8 md:mb-10">
-        🛠️ I&apos;m passionate about open source and I love to work on projects
-        or reimplemente papers. Here are some of my projects:
-      </Paragraph>
-      <div className="mb-8 flex w-full flex-col md:mb-12">
-        {projects.map((project, id) => (
-          <ProjectCard key={id} project={project} />
-        ))}
-      </div>
-      <Heading2>Find me</Heading2>
+
       <Paragraph>
         📫 If you want to contact me, you can reach me at{" "}
         <Link
@@ -52,9 +36,16 @@ export default function Home() {
           href="https://github.com/PierreLouisLetoquart"
         >
           GitHub
+        </Link>{" "}
+        or checkout my{" "}
+        <Link
+          href={"/projects"}
+          className="font-normal underline underline-offset-4"
+        >
+          Projects page
         </Link>
         !
       </Paragraph>
-    </main>
+    </>
   );
 }

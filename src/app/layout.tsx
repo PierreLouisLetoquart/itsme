@@ -1,6 +1,8 @@
 import { IBM_Plex_Mono } from "next/font/google";
+
 import "@/styles/globals.css";
 import { cn } from "@/utils/cn";
+import { Navbar } from "@/components/navbar";
 
 const ibm_plex_mono = IBM_Plex_Mono({
   weight: ["300", "400", "500", "600", "700"],
@@ -17,8 +19,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
           ibm_plex_mono.className,
         )}
       >
-        <div className="bg-grid-zinc-200/[0.3] dark:bg-grid-zinc-800/[0.3]">
-          {children}
+        <div className="bg-grid-zinc-200/[0.3] dark:bg-grid-zinc-800/[0.3] min-h-screen">
+          <div className="mx-auto w-full max-w-4xl">
+            <Navbar />
+            {children}
+          </div>
         </div>
       </body>
     </html>
