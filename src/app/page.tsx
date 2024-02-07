@@ -6,14 +6,7 @@ import { projects } from "@/utils/projects";
 
 export default function Home() {
   return (
-    <main
-      className="mx-auto w-full max-w-4xl py-12 md:py-20"
-      // style={{
-      //   backgroundImage: `url("${svgToTinyDataUri(
-      //     `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="currentColor"><path d="M0 .5H31.5V32"/></svg>`,
-      //   )}")`,
-      // }}
-    >
+    <main className="mx-auto w-full max-w-4xl py-12 md:py-20">
       <h1 className="mb-6 text-3xl font-bold tracking-tighter md:mb-10 md:text-5xl">
         PLL.
       </h1>
@@ -27,7 +20,7 @@ export default function Home() {
         tech world. I hope you will find something interesting here! 🚀
       </p>
       <h2 className="mb-6 text-xl font-bold tracking-tighter md:mb-10 md:text-3xl">
-        Projects
+        My Projects
       </h2>
       <p className="mb-8 text-sm font-normal md:mb-10 md:text-lg">
         🛠️ I&apos;m passionate about open source and I love to work on projects
@@ -37,7 +30,7 @@ export default function Home() {
         {projects.map((project, id) => (
           <div
             key={id}
-            className="flex w-full flex-col gap-3 border-b border-zinc-600 py-6 dark:border-zinc-200"
+            className="flex w-full flex-col gap-3 border-b border-zinc-600 py-6 dark:border-zinc-400"
           >
             <Link href={project.link}>
               <h3 className="flex items-center gap-2 text-lg font-bold tracking-tight md:text-xl">
@@ -64,9 +57,9 @@ export default function Home() {
         ))}
       </div>
       <h2 className="mb-6 text-xl font-bold tracking-tighter md:mb-10 md:text-3xl">
-        Contact
+        Find me
       </h2>
-      <p className="mb-8 text-sm font-light md:mb-12 md:text-lg">
+      <p className="text-sm font-light md:text-lg">
         📫 If you want to contact me, you can reach me at{" "}
         <Link
           className="font-normal underline underline-offset-4"

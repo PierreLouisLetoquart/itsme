@@ -13,11 +13,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-white px-3 antialiased transition-colors selection:bg-zinc-800 selection:text-zinc-50 sm:px-6 dark:bg-black dark:selection:bg-zinc-100 dark:selection:text-white",
+          "min-h-screen bg-white px-3 text-zinc-900 antialiased transition-colors selection:bg-zinc-800 selection:text-zinc-50 sm:px-6 dark:bg-black dark:text-zinc-200 dark:selection:bg-zinc-100 dark:selection:text-white",
           ibm_plex_mono.className,
         )}
       >
-        {children}
+        <div className="bg-grid-zinc-200/[0.3] dark:bg-grid-zinc-800/[0.3]">
+          {children}
+        </div>
       </body>
     </html>
   );
