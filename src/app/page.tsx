@@ -1,8 +1,9 @@
 import Link from "next/link";
-// import svgToTinyDataUri from "mini-svg-data-uri";
 
-import { ExternalLinkIcon } from "@/utils/icon";
 import { projects } from "@/utils/projects";
+import { ProjectCard } from "@/components/project-card";
+import { Paragraph } from "@/components/paragraph";
+import { Heading2 } from "@/components/heading";
 
 export default function Home() {
   return (
@@ -10,56 +11,27 @@ export default function Home() {
       <h1 className="mb-6 text-3xl font-bold tracking-tighter md:mb-10 md:text-5xl">
         PLL.
       </h1>
-      <p className="mb-4 text-sm font-normal md:mb-6 md:text-lg">
+      <Paragraph className="mb-4 md:mb-6">
         👋 Hi there! I&apos;m Pierre-Louis, a student in computer science
         actually in Montreal, Canada. When I&apos;m not programming, I like to
         play basketball or climbing montains with my friends.
-      </p>
-      <p className="mb-8 text-sm font-normal md:mb-12 md:text-lg">
+      </Paragraph>
+      <Paragraph className="mb-8 md:mb-12">
         I created this portfolio to share my projects and my thoughts about the
         tech world. I hope you will find something interesting here! 🚀
-      </p>
-      <h2 className="mb-6 text-xl font-bold tracking-tighter md:mb-10 md:text-3xl">
-        My Projects
-      </h2>
-      <p className="mb-8 text-sm font-normal md:mb-10 md:text-lg">
+      </Paragraph>
+      <Heading2>My Projects</Heading2>
+      <Paragraph className="mb-8 md:mb-10">
         🛠️ I&apos;m passionate about open source and I love to work on projects
         or reimplemente papers. Here are some of my projects:
-      </p>
+      </Paragraph>
       <div className="mb-8 flex w-full flex-col md:mb-12">
         {projects.map((project, id) => (
-          <div
-            key={id}
-            className="flex w-full flex-col gap-3 border-b border-zinc-600 py-6 dark:border-zinc-400"
-          >
-            <Link href={project.link}>
-              <h3 className="flex items-center gap-2 text-lg font-bold tracking-tight md:text-xl">
-                {project.title}
-                {project.linkIcon || (
-                  <ExternalLinkIcon className="h-4 w-4 md:h-5 md:w-5" />
-                )}
-              </h3>
-            </Link>
-            <p className="text-xs font-light md:text-sm">
-              {project.description}
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {project.tags.map((tag, id) => (
-                <span
-                  key={id}
-                  className="rounded-full border border-zinc-200 bg-transparent px-3 py-1 text-xs dark:border-zinc-700"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
+          <ProjectCard key={id} project={project} />
         ))}
       </div>
-      <h2 className="mb-6 text-xl font-bold tracking-tighter md:mb-10 md:text-3xl">
-        Find me
-      </h2>
-      <p className="text-sm font-light md:text-lg">
+      <Heading2>Find me</Heading2>
+      <Paragraph>
         📫 If you want to contact me, you can reach me at{" "}
         <Link
           className="font-normal underline underline-offset-4"
@@ -82,7 +54,7 @@ export default function Home() {
           GitHub
         </Link>
         !
-      </p>
+      </Paragraph>
     </main>
   );
 }
