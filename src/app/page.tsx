@@ -74,7 +74,7 @@ export default function Home() {
         >
           LinkedIn
         </Link>
-        . And if you want to see my code, you can find me on{" "}
+        . And if you want to see more on my code, you can find me on{" "}
         <Link
           className="font-normal underline underline-offset-4"
           href="https://github.com/PierreLouisLetoquart"
