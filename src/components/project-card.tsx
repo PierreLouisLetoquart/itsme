@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import type { Project } from "@/utils/projects";
+import type { Project } from "@/data/projects";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
