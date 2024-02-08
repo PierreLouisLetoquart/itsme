@@ -15,11 +15,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-white text-zinc-900 antialiased transition-colors selection:bg-zinc-800 selection:text-zinc-50 dark:bg-black dark:text-zinc-200 dark:selection:bg-zinc-100 dark:selection:text-zinc-800",
+          "min-h-[100svh] bg-white text-zinc-900 antialiased transition-colors selection:bg-zinc-800 selection:text-zinc-50 dark:bg-black dark:text-zinc-200 dark:selection:bg-zinc-100 dark:selection:text-zinc-800",
           ibm_plex_mono.className,
         )}
       >
-        <div className="bg-grid-zinc-200/[0.3] dark:bg-grid-zinc-600/[0.3] min-h-screen px-6">
+        <div className="bg-grid-zinc-200/[0.3] dark:bg-grid-zinc-600/[0.3] min-h-[100svh] px-6">
           <div className="mx-auto w-full max-w-4xl">
             <MHeader />
             {children}
