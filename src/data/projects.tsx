@@ -1,4 +1,4 @@
-import { LinkIcon, ExternalLinkIcon, GithubIcon } from "@/utils/icon";
+import { GithubIcon } from "@/utils/icon";
 
 export type Project = {
   title: string;
