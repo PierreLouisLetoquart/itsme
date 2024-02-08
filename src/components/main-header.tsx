@@ -7,20 +7,15 @@ import { gsap } from "gsap";
 
 import { cn } from "@/utils/cn";
 
-interface MHeaderProps extends React.HTMLAttributes<HTMLElement> {
-  isMobile: boolean;
-}
+interface MHeaderProps extends React.HTMLAttributes<HTMLElement> {}
 
-export function MHeader({ isMobile, className, ...props }: MHeaderProps) {
+export function MHeader({ className, ...props }: MHeaderProps) {
   const pathname = usePathname();
   const headingLg = useRef(null);
   const headingSm = useRef(null);
 
   useEffect(() => {
-    // if (isMobile) return;
-
     gsap.set(headingLg.current, { y: 100, opacity: 0.5 });
-
     gsap.to(headingLg.current, {
       duration: 1.1,
       y: 0,
@@ -30,10 +25,7 @@ export function MHeader({ isMobile, className, ...props }: MHeaderProps) {
   });
 
   useEffect(() => {
-    // if (isMobile) return;
-
     gsap.set(headingSm.current, { x: -100, opacity: 0.5 });
-
     gsap.to(headingSm.current, {
       duration: 1.1,
       x: 0,
@@ -54,10 +46,7 @@ export function MHeader({ isMobile, className, ...props }: MHeaderProps) {
         <div className="overflow-hidden">
           <h1
             ref={headingSm}
-            className={`text-2xl font-semibold tracking-tight ${
-              // isMobile ? "opacity-100" : "opacity-0"
-              null
-            }`}
+            className={"text-2xl font-semibold tracking-tight"}
           >
             {pathname === "/" ? "PLL." : "Works."}
           </h1>
@@ -77,10 +66,7 @@ export function MHeader({ isMobile, className, ...props }: MHeaderProps) {
         <div className="overflow-hidden">
           <h1
             ref={headingLg}
-            className={`text-4xl font-semibold tracking-tight lg:text-5xl ${
-              // isMobile ? "opacity-100" : "opacity-0"
-              null
-            }`}
+            className={"text-4xl font-semibold tracking-tight lg:text-5xl"}
           >
             {pathname === "/" ? "PLL." : "Works."}
           </h1>
