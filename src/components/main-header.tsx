@@ -7,7 +7,7 @@ export function MHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="w-full border-b border-black py-6 dark:border-white">
+    <header className="w-full border-b border-black py-6 md:pt-10 lg:pt-12 dark:border-white">
       <div className="flex items-end justify-between sm:hidden">
         <h1 className="text-2xl font-semibold">
           {pathname === "/" ? "PLL." : "Works."}
