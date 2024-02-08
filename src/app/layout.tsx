@@ -30,7 +30,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <div className="bg-grid-zinc-200/[0.3] dark:bg-grid-zinc-600/[0.3] min-h-[100svh] px-6">
           <div className="mx-auto w-full max-w-4xl">
-            <MHeader />
+            <MHeader isMobile={isMobileView ? true : false} />
             {children}
           </div>
         </div>

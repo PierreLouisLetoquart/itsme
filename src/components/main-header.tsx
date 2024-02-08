@@ -5,11 +5,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 
-export function MHeader() {
+import { cn } from "@/utils/cn";
+
+interface MHeaderProps extends React.HTMLAttributes<HTMLElement> {
+  isMobile: boolean;
+}
+
+export function MHeader({ isMobile, className, ...props }: MHeaderProps) {
   const pathname = usePathname();
   const heading = useRef(null);
 
   useEffect(() => {
+    if (isMobile) return;
+
     gsap.set(heading.current, { y: 100, opacity: 0.5 });
 
     gsap.to(heading.current, {
@@ -21,12 +29,20 @@ export function MHeader() {
   });
 
   return (
-    <header className="w-full border-b border-black py-6 md:pt-10 lg:pt-12 dark:border-white">
+    <header
+      className={cn(
+        "w-full border-b border-black py-6 md:pt-10 lg:pt-12 dark:border-white",
+        className,
+      )}
+      {...props}
+    >
       <div className="flex items-end justify-between sm:hidden">
         <div className="overflow-hidden">
           <h1
             ref={heading}
-            className="text-2xl font-semibold tracking-tight opacity-0"
+            className={`text-2xl font-semibold tracking-tight ${
+              isMobile ? "opacity-100" : "opacity-0"
+            }`}
           >
             {pathname === "/" ? "PLL." : "Works."}
           </h1>
@@ -46,7 +62,9 @@ export function MHeader() {
         <div className="overflow-hidden">
           <h1
             ref={heading}
-            className="text-4xl font-semibold tracking-tight opacity-0"
+            className={`text-4xl font-semibold tracking-tight ${
+              isMobile ? "opacity-100" : "opacity-0"
+            }`}
           >
             {pathname === "/" ? "PLL." : "Works."}
           </h1>
@@ -65,7 +83,9 @@ export function MHeader() {
         <div className="overflow-hidden">
           <h1
             ref={heading}
-            className="text-5xl font-bold tracking-tight opacity-0"
+            className={`text-5xl font-bold tracking-tight ${
+              isMobile ? "opacity-100" : "opacity-0"
+            }`}
           >
             {pathname === "/" ? "PLL." : "Works."}
           </h1>
