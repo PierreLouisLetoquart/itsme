@@ -8,7 +8,7 @@ export default function ProjectsList() {
         🛠️ I&apos;m passionate about open source and I love to work on projects
         or reimplemente papers. Here are some of my projects:
       </p>
-      <div className="mb-8 flex w-full flex-col md:mb-12">
+      <div className="flex w-full flex-col pb-12 md:pb-20">
         {projects.map((project, id) => (
           <ProjectCard key={id} project={project} />
         ))}
