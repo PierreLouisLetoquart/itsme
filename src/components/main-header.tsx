@@ -24,7 +24,10 @@ export function MHeader() {
     <header className="w-full border-b border-black py-6 md:pt-10 lg:pt-12 dark:border-white">
       <div className="flex items-end justify-between sm:hidden">
         <div className="overflow-hidden">
-          <h1 ref={heading} className="text-2xl font-semibold tracking-tight">
+          <h1
+            ref={heading}
+            className="text-2xl font-semibold tracking-tight opacity-0"
+          >
             {pathname === "/" ? "PLL." : "Works."}
           </h1>
         </div>
@@ -41,7 +44,10 @@ export function MHeader() {
 
       <div className="hidden items-end justify-between sm:max-lg:flex">
         <div className="overflow-hidden">
-          <h1 ref={heading} className="text-4xl font-semibold tracking-tight">
+          <h1
+            ref={heading}
+            className="text-4xl font-semibold tracking-tight opacity-0"
+          >
             {pathname === "/" ? "PLL." : "Works."}
           </h1>
         </div>
@@ -57,7 +63,10 @@ export function MHeader() {
 
       <div className="hidden flex-col items-start lg:flex">
         <div className="overflow-hidden">
-          <h1 ref={heading} className="text-5xl font-bold tracking-tight">
+          <h1
+            ref={heading}
+            className="text-5xl font-bold tracking-tight opacity-0"
+          >
             {pathname === "/" ? "PLL." : "Works."}
           </h1>
         </div>
