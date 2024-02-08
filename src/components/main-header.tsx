@@ -9,9 +9,11 @@ export function MHeader() {
   return (
     <header className="w-full border-b border-black py-6 dark:border-white">
       <div className="flex items-end justify-between sm:hidden">
-        <h1 className="text-2xl font-semibold">
-          {pathname === "/" ? "PLL." : "Works."}
-        </h1>
+        <Link href="/">
+          <h1 className="text-2xl font-semibold">
+            {pathname === "/" ? "PLL." : "Works."}
+          </h1>
+        </Link>
         {pathname === "/" ? (
           <Link
             className="text-sm font-normal hover:opacity-80"
@@ -27,9 +29,11 @@ export function MHeader() {
       </div>
 
       <div className="hidden items-end justify-between sm:max-lg:flex">
-        <h1 className="text-4xl font-semibold">
-          {pathname === "/" ? "PLL." : "Works."}
-        </h1>
+        <Link href="/">
+          <h1 className="text-4xl font-semibold">
+            {pathname === "/" ? "PLL." : "Works."}
+          </h1>
+        </Link>
         <nav className="flex items-center gap-6 md:gap-10">
           <Link
             className={`text-base font-normal ${
@@ -51,9 +55,11 @@ export function MHeader() {
       </div>
 
       <div className="hidden flex-col items-start lg:flex">
-        <h1 className="text-5xl font-bold">
-          {pathname === "/" ? "PLL." : "Works."}
-        </h1>
+        <Link href="/">
+          <h1 className="text-5xl font-bold">
+            {pathname === "/" ? "PLL." : "Works."}
+          </h1>
+        </Link>
 
         <nav className="flex w-full items-center justify-end gap-10">
           <Link
