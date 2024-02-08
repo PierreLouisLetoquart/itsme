@@ -36,7 +36,7 @@ export function StickyCursor() {
         top: smoothMouse.y,
       }}
       className={
-        "pointer-events-none fixed h-3 w-3 rounded-full bg-black dark:bg-zinc-100"
+        "pointer-events-none fixed z-10 h-3 w-3 rounded-full bg-black dark:bg-zinc-100"
       }
     />
   );

@@ -6,6 +6,10 @@ html {
   color-scheme: light dark;
 }
 
+body {
+  cursor: default;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
