@@ -1,24 +1,7 @@
-import { type SocialMediaInfo, SocialMediaElement } from "@/components/socials";
+import { SocialMediaElement } from "@/components/socials";
+import { socialMediaInfo } from "@/data/socials";
 
 export default function Home() {
-  const socialMediaInfo: SocialMediaInfo[] = [
-    {
-      platform: "Email",
-      profileLink: "mailto:randlgint@proton.me",
-      linkText: "randlgint@proton.me",
-    },
-    {
-      platform: "Github",
-      profileLink: "https://github.com/PierreLouisLetoquart",
-      linkText: "@PierreLouisLetoquart",
-    },
-    {
-      platform: "LinkedIn",
-      profileLink: "www.linkedin.com/in/pierre-louis-létoquart-b30b651b6",
-      linkText: "@Pierre-Louis Létoquart",
-    },
-  ];
-
   return (
     <>
       <p className="mb-6 mt-8 text-sm font-normal leading-7 sm:mt-10 md:mb-8 md:mt-14 md:text-lg">
