@@ -13,16 +13,30 @@ interface MHeaderProps extends React.HTMLAttributes<HTMLElement> {
 
 export function MHeader({ isMobile, className, ...props }: MHeaderProps) {
   const pathname = usePathname();
-  const heading = useRef(null);
+  const headingLg = useRef(null);
+  const headingSm = useRef(null);
 
   useEffect(() => {
-    if (isMobile) return;
+    // if (isMobile) return;
 
-    gsap.set(heading.current, { y: 100, opacity: 0.5 });
+    gsap.set(headingLg.current, { y: 100, opacity: 0.5 });
 
-    gsap.to(heading.current, {
+    gsap.to(headingLg.current, {
       duration: 1.1,
       y: 0,
+      opacity: 1,
+      ease: "expo.out",
+    });
+  });
+
+  useEffect(() => {
+    // if (isMobile) return;
+
+    gsap.set(headingSm.current, { x: -100, opacity: 0.5 });
+
+    gsap.to(headingSm.current, {
+      duration: 1.1,
+      x: 0,
       opacity: 1,
       ease: "expo.out",
     });
@@ -39,9 +53,10 @@ export function MHeader({ isMobile, className, ...props }: MHeaderProps) {
       <div className="flex items-end justify-between sm:hidden">
         <div className="overflow-hidden">
           <h1
-            ref={heading}
+            ref={headingSm}
             className={`text-2xl font-semibold tracking-tight ${
-              isMobile ? "opacity-100" : "opacity-0"
+              // isMobile ? "opacity-100" : "opacity-0"
+              null
             }`}
           >
             {pathname === "/" ? "PLL." : "Works."}
@@ -58,40 +73,19 @@ export function MHeader({ isMobile, className, ...props }: MHeaderProps) {
         )}
       </div>
 
-      <div className="hidden items-end justify-between sm:max-lg:flex">
+      <div className="hidden items-end justify-between sm:flex lg:flex-col lg:items-start">
         <div className="overflow-hidden">
           <h1
-            ref={heading}
-            className={`text-4xl font-semibold tracking-tight ${
-              isMobile ? "opacity-100" : "opacity-0"
+            ref={headingLg}
+            className={`text-4xl font-semibold tracking-tight lg:text-5xl ${
+              // isMobile ? "opacity-100" : "opacity-0"
+              null
             }`}
           >
             {pathname === "/" ? "PLL." : "Works."}
           </h1>
         </div>
-        <nav className="flex items-center gap-6 md:gap-10">
-          <Link href="/" className={"text-base"}>
-            Home
-          </Link>
-          <Link href="/projects" className={"text-base"}>
-            Projects
-          </Link>
-        </nav>
-      </div>
-
-      <div className="hidden flex-col items-start lg:flex">
-        <div className="overflow-hidden">
-          <h1
-            ref={heading}
-            className={`text-5xl font-bold tracking-tight ${
-              isMobile ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            {pathname === "/" ? "PLL." : "Works."}
-          </h1>
-        </div>
-
-        <nav className="flex w-full items-center justify-end gap-10">
+        <nav className="flex items-center gap-6 md:gap-10 lg:w-full lg:justify-end">
           <Link href="/" className={"text-base font-normal"}>
             Home
           </Link>
