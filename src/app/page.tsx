@@ -4,7 +4,7 @@ import { Paragraph } from "@/components/paragraph";
 export default function Home() {
   return (
     <>
-      <Paragraph className="mb-6 md:mb-8">
+      <Paragraph className="mb-6 mt-8 sm:mt-10 md:mb-8 md:mt-14">
         👋 Hi there! I&apos;m Pierre-Louis, a student in computer science
         actually in Montreal, Canada. When I&apos;m not programming, I like to
         play basketball or climbing montains with my friends.
