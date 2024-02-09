@@ -15,7 +15,7 @@ export default function Home() {
         tech world. I hope you will find something interesting here! 🚀
       </p>
 
-      <ul className="flex flex-col gap-5 lg:gap-8">
+      <ul className="flex flex-col gap-5 pb-12 md:pb-20 lg:gap-8">
         {socialMediaInfo.map((socialInfo, index) => (
           <SocialMediaElement key={index} socialInfo={socialInfo} />
         ))}
