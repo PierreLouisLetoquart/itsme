@@ -46,7 +46,7 @@ export function MHeader({ className, ...props }: MHeaderProps) {
         <div className="overflow-hidden">
           <h1
             ref={headingSm}
-            className={"text-2xl font-semibold tracking-tight"}
+            className={"text-2xl font-semibold tracking-tight opacity-0"}
           >
             {pathname === "/" ? "PLL." : "Works."}
           </h1>
@@ -66,7 +66,9 @@ export function MHeader({ className, ...props }: MHeaderProps) {
         <div className="overflow-hidden">
           <h1
             ref={headingLg}
-            className={"text-4xl font-semibold tracking-tight lg:text-5xl"}
+            className={
+              "text-4xl font-semibold tracking-tight opacity-0 lg:text-5xl"
+            }
           >
             {pathname === "/" ? "PLL." : "Works."}
           </h1>
