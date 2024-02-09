@@ -12,7 +12,7 @@ export default function Home() {
 
       <p className="mb-8 text-sm font-normal leading-7 md:mb-12 md:text-lg lg:mb-16">
         I created this portfolio to share my projects and my thoughts about the
-        tech world. I hope you will find something interesting here! 🚀
+        tech world. I hope you&apos;ll find something interesting here! 🚀
       </p>
 
       <ul className="flex flex-col gap-5 pb-12 md:pb-20 lg:gap-8">
