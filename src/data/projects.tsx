@@ -20,7 +20,7 @@ export const projects = [
   {
     title: "Dynamic binary visualization",
     description:
-      "This simple algorithm aims to take in input an unknown raw binary and generate a visualization of it. Trying to find some patterns in th egenerated image can help to understand the binary.",
+      "This simple algorithm aims to take in input an unknown raw binary and generate a visualization of it. Trying to find some patterns in the generated image can help to understand the binary.",
     tags: ["Rust", "Image processing", "Binary", "Visualization"],
     link: "https://github.com/PierreLouisLetoquart/bvtool",
     linkIcon: <GithubIcon className="h-4 w-4 md:h-5 md:w-5" />,
