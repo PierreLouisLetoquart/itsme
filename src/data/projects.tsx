@@ -1,4 +1,4 @@
-import { GithubIcon } from "@/utils/icon";
+import { GithubIcon, RustIcon, MediumIcon } from "@/utils/icon";
 
 export type Project = {
   title: string;
@@ -15,23 +15,15 @@ export const projects = [
       "Distance-based methods for vector comparison and analysis. This is a porting of the JS/TS pkg ml-distance to Rust.",
     tags: ["Distance", "Similarity", "Vector"],
     link: "https://crates.io/crates/ml-distance",
-    linkIcon: <GithubIcon className="h-4 w-4 md:h-5 md:w-5" />,
-  },
-  {
-    title: "Adapt local LLM to ur needs",
-    description:
-      "The world is changing blazingly fast, and you must adapt to it. This project is about how to adapt local LLM to your needs.",
-    tags: ["Rust", "Ollama", "LLM", "Modelfile"],
-    link: "https://github.com/PierreLouisLetoquart/mistralkw",
-    linkIcon: <GithubIcon className="h-4 w-4 md:h-5 md:w-5" />,
+    linkIcon: <RustIcon className="h-4 w-4 md:h-5 md:w-5" />,
   },
   {
     title: "Dynamic binary visualization",
     description:
       "This simple algorithm aims to take in input an unknown raw binary and generate a visualization of it. Trying to find some patterns in the generated image can help to understand the binary.",
     tags: ["Rust", "Image processing", "Binary", "Visualization"],
-    link: "https://github.com/PierreLouisLetoquart/bvtool",
-    linkIcon: <GithubIcon className="h-4 w-4 md:h-5 md:w-5" />,
+    link: "https://medium.com/@pierrelouislet/dynamic-binary-visualization-cae62ba79e37",
+    linkIcon: <MediumIcon className="h-4 w-4 md:h-5 md:w-5" />,
   },
   {
     title: "Can Gzip coupled with a KNN beat BERT",
