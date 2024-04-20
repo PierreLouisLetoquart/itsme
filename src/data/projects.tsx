@@ -10,6 +10,14 @@ export type Project = {
 
 export const projects = [
   {
+    title: "ml-distance Rust Lib",
+    description:
+      "Distance-based methods for vector comparison and analysis. This is a porting of the JS/TS pkg ml-distance to Rust.",
+    tags: ["Distance", "Similarity", "Vector"],
+    link: "https://crates.io/crates/ml-distance",
+    linkIcon: <GithubIcon className="h-4 w-4 md:h-5 md:w-5" />,
+  },
+  {
     title: "Adapt local LLM to ur needs",
     description:
       "The world is changing blazingly fast, and you must adapt to it. This project is about how to adapt local LLM to your needs.",
